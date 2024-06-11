@@ -23,7 +23,7 @@ const ChatSchema = new Schema({
     default:Date.now
   },
   id:{
-    type: int,
+    type: String,
     default:Date.now
   },
   record_id:{

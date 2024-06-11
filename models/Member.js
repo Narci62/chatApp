@@ -37,7 +37,7 @@ const MemberSchema = new Schema({
     required:true
   },
   is_chat_admin:{
-    type:boolean,
+    type:Boolean,
     default:true
   },
   created_at: {
@@ -49,7 +49,7 @@ const MemberSchema = new Schema({
     default:Date.now
   },
   id:{
-    type: int,
+    type: String,
     default:Date.now
   },
   record_id:{

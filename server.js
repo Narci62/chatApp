@@ -1,4 +1,4 @@
-const express = require('express');
+const app = require('express');
 const http = require('http');
 const socketIo = require('socket.io');
 const mongoose = require('mongoose');
@@ -9,13 +9,10 @@ mongoose.connect('mongodb://localhost:27017/chatapp', {
     useUnifiedTopology: true,
   });
 
-const {
-    User,
-    Chat,
-    Member,
-    Message
-  } = require("./models");
-
+const User = require("./models/User");
+const Chat = require("./models/Chat");
+const Member = require("./models/Member");
+const Message = require("./models/Message");
 const server = http.createServer(app);
 const io = socketIo(server);
 
